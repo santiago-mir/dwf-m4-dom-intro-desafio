@@ -1,5 +1,33 @@
+body{
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(196, 252, 212);
+}
+
+.seccion-principal{
+  max-width: 500px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(255, 205, 205);
+  
+}
+
+.titulo{
+  margin: 0;
+  text-align: center;
+  
+}
+
+
 .lista {
-  background-color: aqua;
+  display: grid;
+  gap: 5px;
+  padding: 15px;
 }
 
 .lista li {

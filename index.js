@@ -1,23 +1,23 @@
 const cosasQueAprendimos = [
   {
     tema: "terminal",
-    class: "",
+    class: "clase-uno",
   },
   {
     tema: "node",
-    class: "",
+    class: "clase-dos",
   },
   {
     tema: "oop",
-    class: "",
+    class: "clase-tres",
   },
   {
     tema: "typescript",
-    class: "",
+    class: "clase-cuatro",
   },
   {
     tema: "css",
-    class: "",
+    class: "clase-cinco",
   },
   {
     tema: "dom",
@@ -25,6 +25,27 @@ const cosasQueAprendimos = [
   },
 ];
 
-function main() {}
+function main() {
+  function removeChildFromUl() {
+    var myListEls = document.querySelectorAll(".lista li");
+    myListEls.forEach((el) => {
+      el.remove();
+    });
+  }
+
+  function addChildtoUl() {
+    var myList = document.querySelector(".lista");
+
+    for (let item of cosasQueAprendimos) {
+      var myNewLiEls = document.createElement("li");
+      myNewLiEls.textContent = item.tema;
+      myNewLiEls.classList.add(item.class);
+      myList.append(myNewLiEls);
+    }
+  }
+
+  removeChildFromUl();
+  addChildtoUl();
+}
 
 main();
